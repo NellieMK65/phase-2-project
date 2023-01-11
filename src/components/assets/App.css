@@ -1,0 +1,34 @@
+body{
+    background-color: #0A2350;
+    font-family: 'Lato' , sans-serif;
+    font-size: 14px;
+    color: #fff;
+    width: 90%;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;    
+    padding: 0.6vh 2vw 0.6vh 2vw;
+    /* margin-left: 0px;
+    color: white ;
+    background-color: transparent;
+    align-content: start; */
+}
+
+/* nav button:hover, nav a:active{
+    color: #0A2350;
+    background-color: #fff;
+    text-decoration: underline;
+} */
+
+ button:hover, button:active{
+    color: #0A2350;
+    background-color: #fff;
+    text-decoration: underline;
+    /* background-color: rgba(94, 151, 255, 0.4); */
+}
+
+
