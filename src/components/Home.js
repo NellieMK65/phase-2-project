@@ -1,43 +1,63 @@
-import React, { useMemo, useState } from "react";
-import FilmList from "./FilmList";
-import Header from "./Header";
-import Footer from "./Footer";
+import React, { useState } from 'react';
+import FeaturedArticle from './FeaturedArticle';
 
-const homePageColumns = {
-  display: "flex",
-  justifyContent: "space-between",
-};
+function Home({ articles }) {
+	const [email, setEmail] = useState('');
 
-const filmListStyle = {
-  display: "grid",
-  gridTemplateColumns: "repeat(5, 1fr)",
-  gridGap: "2em",
-};
+	function handleSubmit(e) {
+		e.preventDefault();
+		fetch('http://localhost:3001/emails', {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json',
+			},
+			body: JSON.stringify({
+				email,
+			}),
+		})
+			.then((r) => r.json())
+			.then(() => {
+				setEmail('');
+			});
+	}
 
-function Home({ films }) {
-  const [searchTerm, setSearchTerm] = useState('');
-  
-  const filmList = useMemo(
-    () =>
-      searchTerm.length
-        ? films.filter((film) =>
-            film.l.toLowerCase().includes(searchTerm.toLowerCase())
-          )
-        : films,
-    [films, searchTerm]
-  );
+	function handleChange(e) {
+		setEmail(e.target.value);
+	}
 
-  return (
-    <div>
-      <Header setSearchTerm={setSearchTerm} />
-      <div style={homePageColumns}>
-        <div>
-          <FilmList films={filmList} listStyle={filmListStyle} />
-        </div>
-      </div>
-      <Footer />
-    </div>
-  );
+	return (
+		<div>
+			<div className="home-box">
+				<p id="welcome-to-newsbinge">
+					<em>Welcome to NewsBinge!</em>
+				</p>
+				<p>
+					{' '}
+					Get your news fix with the top headlines of the day,
+					courtesy of NewsAPI.
+				</p>
+				<p>
+					"News API is a simple, easy-to-use REST API that returns
+					JSON search results for current and historic news articles
+					published by over 80,000 worldwide sources."
+				</p>
+				<p>
+					Click on "Binge" above to make your way through today's
+					news.
+				</p>
+			</div>
+			<form className="email" onSubmit={handleSubmit}>
+				<label>Enter email to join mailing list: </label>
+				<input
+					type="text"
+					placeholder="Email"
+					onChange={handleChange}
+					value={email}
+				></input>
+				<button type="submit">enter</button>
+			</form>
+		</div>
+	);
 }
 
 export default Home;

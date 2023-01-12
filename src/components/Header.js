@@ -1,16 +1,13 @@
 import React from "react";
-import Logo from "./Logo";
-import Search from "./Search";
-import Navbar from "./Navbar";
+import { NavLink }from "react-router-dom";
 
-function Header({ setSearchTerm, noSearch }) {
+
+function Header(){
   return (
     <div>
-      <Logo />
-      {!noSearch && <Search setSearchTerm={setSearchTerm} />}
-      <Navbar />
+      <NavLink to = "./"><header className="header">#NewsBinge</header></NavLink>
     </div>
-  );
+    )
 }
 
 export default Header;
