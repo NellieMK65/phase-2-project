@@ -1,13 +1,15 @@
 {
-  "main.css": "/phase-2-project/static/css/main.69d074ff.chunk.css",
-  "main.js": "/phase-2-project/static/js/main.0ff9c71c.chunk.js",
-  "main.js.map": "/phase-2-project/static/js/main.0ff9c71c.chunk.js.map",
-  "runtime~main.js": "/phase-2-project/static/js/runtime~main.58cae7f1.js",
-  "runtime~main.js.map": "/phase-2-project/static/js/runtime~main.58cae7f1.js.map",
-  "static/js/2.03b3570a.chunk.js": "/phase-2-project/static/js/2.03b3570a.chunk.js",
-  "static/js/2.03b3570a.chunk.js.map": "/phase-2-project/static/js/2.03b3570a.chunk.js.map",
-  "index.html": "/phase-2-project/index.html",
-  "precache-manifest.70bd48be90fb599cdca11869b96b9382.js": "/phase-2-project/precache-manifest.70bd48be90fb599cdca11869b96b9382.js",
-  "service-worker.js": "/phase-2-project/service-worker.js",
-  "static/css/main.69d074ff.chunk.css.map": "/phase-2-project/static/css/main.69d074ff.chunk.css.map"
+  "files": {
+    "main.css": "/phase-2-project/static/css/main.ca5e50ac.css",
+    "main.js": "/phase-2-project/static/js/main.f4db922d.js",
+    "static/js/787.66a4299e.chunk.js": "/phase-2-project/static/js/787.66a4299e.chunk.js",
+    "index.html": "/phase-2-project/index.html",
+    "main.ca5e50ac.css.map": "/phase-2-project/static/css/main.ca5e50ac.css.map",
+    "main.f4db922d.js.map": "/phase-2-project/static/js/main.f4db922d.js.map",
+    "787.66a4299e.chunk.js.map": "/phase-2-project/static/js/787.66a4299e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ca5e50ac.css",
+    "static/js/main.f4db922d.js"
+  ]
 }
